@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lan's Restaurant: Menu</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.7/handlebars.min.js"
+        integrity="sha512-RNLkV3d+aLtfcpEyFG8jRbnWHxUqVZozacROI4J2F1sTaDqo1dPQYs01OMi1t1w9Y2FdbSCDSQ2ZVdAC8bzgAg=="
+        crossorigin="anonymous"></script>
+    <script src="scripts/menudata.js" ></script>
+    <link rel="stylesheet" href="styles/site.css" />
+
+</head>
+<body class="font">
+    <header>
+        <nav class="primary">
+            <ul>
+                <li><a href="index.html">About</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class = "title">
+        <a href="index.html">Lan's Restaurant</a>
+        <h2 class="temporary">(666) - 666 - 6666</h2>
+        <h2 class="temporary">(menu is currently still under construction)</h2>
+    </div>
+
+    <main id="menucontainer">
+        <!-- content will go here -->
+    </main>
+
+    
+    <script type="application/x-handlebars" id="menu-template">
+    <div>
+        <table>
+            <thead>
+                <tr>
+                    <th colspan="2">Appetizer</th>
+                    
+                </tr>
+                
+            </thead>
+    
+            {{#each appetizer as |type|}}
+            <tbody>
+                <tr>
+                    <td class="type">{{type.name}}</td>
+                    <td>{{type.price}}</td>
+                </tr>
+            </tbody>
+            {{/each}}
+        </table>
+    
+        <br>
+
+        <table>
+            <thead>
+                <tr>
+                    <th colspan="2">Soups</th>
+                </tr>
+                
+            </thead>
+    
+            {{#each soups as |type|}}
+            <tbody>
+                <tr>
+                    <td class="type">{{type.name}}</td>
+                    <td>{{type.price}}</td>
+                </tr>
+            </tbody>
+            {{/each}}
+        </table>
+
+        <br>
+
+        <table>
+            <thead>
+                <tr>
+                    <th colspan="2">Fried Rice</th>
+                </tr>
+                
+            </thead>
+    
+            {{#each rice as |type|}}
+            <tbody>
+                <tr>
+                    <td class="type">{{type.name}}</td>
+                    <td>{{type.price}}</td>
+                </tr>
+            </tbody>
+            {{/each}}
+        </table>
+
+        <br>
+        
+        <table>
+            <thead>
+                <tr>
+                    <th colspan="2">Lo Mein</th>
+                </tr>
+                
+            </thead>
+    
+            {{#each lomein as |type|}}
+            <tbody>
+                <tr>
+                    <td class="type">{{type.name}}</td>
+                    <td>{{type.price}}</td>
+                </tr>
+            </tbody>
+            {{/each}}
+        </table>
+    </div>
+
+    <!-- <div id="logo"> 
+        <img src="images/takeoutbox_image.jpg"> 
+    </div>  -->
+    </script>
+
+    <footer>
+        <nav class="addressinfo">
+            <ul>
+                <li>666 Sixth Street</li>
+                <li>Sixtown, MA 66666</li>
+                <li>Cell: (666) - 666 - 6666</li>
+            </ul>
+        </nav>
+    </footer>
+</body>
+</html>
